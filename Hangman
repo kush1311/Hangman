@@ -1,0 +1,24 @@
+word=["kushal","bhavik","dharmil"]
+import random
+chosen_word = random.choice(word)
+display = []
+word_length = len(chosen_word)
+for _ in range(word_length):
+    display += "_"
+print(display)
+print(chosen_word)
+end_of_the_game=False
+
+while not end_of_the_game:
+    
+    guess = input("Guess a letter: ").lower()
+
+    for possition in range(word_length):
+        latter=chosen_word[possition]
+        if latter == guess:
+            display[possition]=latter
+
+    print(display)
+    if "_" not in display:
+        end_of_the_game=True
+        print("you won")
