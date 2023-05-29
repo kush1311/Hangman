@@ -64,7 +64,6 @@ word_length = len(chosen_word)
 for _ in range(word_length):
     display += "_"
 print(display)
-print(chosen_word)
 end_of_the_game=False
 lives=6
 while not end_of_the_game:
